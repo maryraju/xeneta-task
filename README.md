@@ -148,7 +148,9 @@ After inspection delete the stack.
 
 * Application issues.
 
-If you see the below error while executing the script
+If you see the below error while executing the script:
+![image](https://user-images.githubusercontent.com/74228590/205720515-a2b4d3d2-a106-4f6a-8be7-70e6aa2fee60.png)
+
 
                 OR
 				
