@@ -58,8 +58,10 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/cloudformation-vpc-templa
 
 * Note down the git commit id and repository name. Edit the 'codedeploy_template.yaml' and give those values to 'Commit' and 'Repo' parameter default values.
 
-**If code deployment from git is done for the first time, follow the instruction in the aws doc: https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-partners-github.html
+If code deployment from git is done for the first time, follow the instruction in the aws doc: https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-partners-github.html
+
 ![image](https://user-images.githubusercontent.com/74228590/205670671-7ec0e80e-6824-443d-9004-f6b0879384d4.png)
+
 Click connect to Github and give your credentials and connect to github.
 
 * Now run the below command in aws cli to create a cloudformation stack.
@@ -67,8 +69,8 @@ Click connect to Github and give your credentials and connect to github.
 ```
 aws cloudformation package --template "<path to cloudformationtemplate>\codedeploy_template.yaml" --s3-bucket mybucket --output-template-file "<path to cloudformationtemplate>\packaged-template.yaml"
 
-aws cloudformation deploy --template-file "<path to cloudformationtemplate>\packaged-template.yaml" --stack-name <stackname>  --capabilities CAPABILITY_NAMED_IAM```
-
+aws cloudformation deploy --template-file "<path to cloudformationtemplate>\packaged-template.yaml" --stack-name <stackname>  --capabilities CAPABILITY_NAMED_IAM
+```
                                       OR
 									  
 * Go to AWS cloudformation console and click create stack. Upload the template.
@@ -147,6 +149,7 @@ After inspection delete the stack.
 * Application issues.
 
 If you see the below error while executing the script:
+
 ![image](https://user-images.githubusercontent.com/74228590/205720515-a2b4d3d2-a106-4f6a-8be7-70e6aa2fee60.png)
 
                 OR
