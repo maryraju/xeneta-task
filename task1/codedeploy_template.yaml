@@ -161,7 +161,7 @@ Resources:
         Ref: WebappSubnets
       Tags:
         - Key: Name
-          Value: webapp-new
+          Value: gunicorn-app
           PropagateAtLaunch: true
 Outputs:
   DeploymentGroup:
