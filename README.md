@@ -2,7 +2,7 @@
 
 ## Task 1:
 
-### Prerequistes
+### Prerequisite
 * AWS account and a user with acess to the below policies:
 ```
   "Statement": [
