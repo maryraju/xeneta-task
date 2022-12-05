@@ -2,7 +2,7 @@
 
 ## Task 1:
 
-### Prerequisite
+### Prerequisites
 * AWS account and a user with acess to the below policies:
 ```
   "Statement": [
@@ -58,10 +58,8 @@ https://docs.aws.amazon.com/codebuild/latest/userguide/cloudformation-vpc-templa
 
 * Note down the git commit id and repository name. Edit the 'codedeploy_template.yaml' and give those values to 'Commit' and 'Repo' parameter default values.
 
-* If code deployment from git is done for the first time, follow the instruction in the aws doc: https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-partners-github.html
-
+**If code deployment from git is done for the first time, follow the instruction in the aws doc: https://docs.aws.amazon.com/codedeploy/latest/userguide/integrations-partners-github.html
 ![image](https://user-images.githubusercontent.com/74228590/205670671-7ec0e80e-6824-443d-9004-f6b0879384d4.png)
-
 Click connect to Github and give your credentials and connect to github.
 
 * Now run the below command in aws cli to create a cloudformation stack.
@@ -69,8 +67,7 @@ Click connect to Github and give your credentials and connect to github.
 ```
 aws cloudformation package --template "<path to cloudformationtemplate>\codedeploy_template.yaml" --s3-bucket mybucket --output-template-file "<path to cloudformationtemplate>\packaged-template.yaml"
 
-aws cloudformation deploy --template-file "<path to cloudformationtemplate>\packaged-template.yaml" --stack-name <stackname>  --capabilities CAPABILITY_NAMED_IAM
-```
+aws cloudformation deploy --template-file "<path to cloudformationtemplate>\packaged-template.yaml" --stack-name <stackname>  --capabilities CAPABILITY_NAMED_IAM```
 
                                       OR
 									  
@@ -110,6 +107,7 @@ sudo chmod 777 dockerexec_script.sh
 This will create two docker containers with the API and db.
 
 * Test the application
+
 Get average rates between ports:
 ```
 curl "http://127.0.0.1:3000/rates?date_from=2021-01-01&date_to=2021-01-31&orig_code=CNGGZ&dest_code=EETLL"
@@ -150,7 +148,6 @@ After inspection delete the stack.
 
 If you see the below error while executing the script:
 ![image](https://user-images.githubusercontent.com/74228590/205720515-a2b4d3d2-a106-4f6a-8be7-70e6aa2fee60.png)
-
 
                 OR
 				
